@@ -1,13 +1,14 @@
-package bookDAOImp;
+package bookInterfaceImp;
 
 import java.util.ArrayList;
 
 import book.Book;
-import bookDao.BookDAO;
+import bookInterface.BookInterface;
 
 
-public class BookDAOImp implements BookDAO
+public class BookInterfaceImp implements BookInterface
 {
+	
 	private static ArrayList<Book> bookList=new ArrayList<Book>();
 	@Override
 	public boolean addNewBook(Book bookObj)

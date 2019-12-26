@@ -1,13 +1,13 @@
 package bookService;
 
-import bookDAOImp.BookDAOImp;
-import bookDao.BookDAO;
+import bookInterface.BookInterface;
+import bookInterfaceImp.BookInterfaceImp;
 
 public class BookService 
 {
-	public static BookDAO getBookDAO()
+	public static BookInterface getBookDAO()
 	{
-		BookDAO dao=new BookDAOImp();
+		BookInterface dao=new BookInterfaceImp();
 		return dao;
 	}
 }

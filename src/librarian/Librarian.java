@@ -2,7 +2,7 @@ package librarian;
 
 import java.util.Scanner;
 
-import bookDao.BookDAO;
+import bookInterface.BookInterface;
 import bookService.BookService;
 import bookValidation.BookValidation;
 
@@ -24,7 +24,7 @@ public class Librarian extends Thread
 	}
 	public void access()
 	{
-		BookDAO dao = BookService.getBookDAO();
+		BookInterface dao = BookService.getBookDAO();
 				   System.out.println("Enter BookTitle");
 			       String bookTitle;
 				   boolean verificationStatus=false;
@@ -32,8 +32,9 @@ public class Librarian extends Thread
 				   {
 					   bookTitle=scan.next();
 					   verificationStatus=BookValidation.verifyBookTitle(bookTitle);
-				   }while(!verificationStatus);
-				   System.out.println("A book with the following title is successfully added " +bookTitle);
+				   }
+				   while(!verificationStatus);
+				   System.out.println("A book with the following title is successfully added  " +bookTitle);
 				   
 		}
 }

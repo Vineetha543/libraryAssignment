@@ -1,8 +1,8 @@
-package bookDao;
+package bookInterface;
 
 import book.Book;
 
-public interface BookDAO
+public interface BookInterface
 {
 	boolean addNewBook(Book bookObj);
 }
